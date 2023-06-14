@@ -1,0 +1,970 @@
+:root {
+    --arrow-invis: rgba(192, 192, 192, 0.452);
+    --arrow-hover: rgba(192, 192, 192, 0.831);
+    --bg-normal: rgba(1, 1, 1, 0.567);
+    --bg-hover-light: rgba(105, 105, 105, 0.396);
+    --bg-hover-dark: rgba(1, 1, 1, 0.567);
+    --transparent: rgba(0, 0, 0, 0);
+    --btn-inactive: rgb(78, 78, 78);
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+button {
+    outline: none;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    text-decoration: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, image {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.body-container {
+    width: 100vw;
+    min-height: 100vh;
+    height: 100svh;
+    background-image: url('../images/bg.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+}
+
+.arrow {
+    background-color: var(--arrow-invis);
+    cursor: pointer;
+    width: max(4vw, 15px);
+    height: max(4vw, 15px);
+    transition: background-color .25s, transform .2s;
+    z-index: 10;
+    position: fixed;
+}
+
+.left {
+    clip-path: polygon(0 0, 0 100%, 60% 50%);
+    margin: 0 0 0 max(1vw, 10px);
+    top: 46.6%;
+    transform-origin: 26% center;
+}
+
+.top {
+    clip-path: polygon(100% 0, 0 0, 50% 60%);
+    margin: max(1vw, 10px) 0 0 0;
+    left: 47.97%;
+    transform-origin: center 26%;
+}
+
+.right {
+    clip-path: polygon(40% 50%, 100% 100%, 100% 0);
+    margin: 0 max(1vw, 10px) 0 0;
+    top: 46.6%;
+    right: 0;
+    transform-origin: 74% center;
+}
+
+.bot {
+    clip-path: polygon(50% 40%, 0 100%, 100% 100%);
+    margin: 0 0 max(1vw, 10px) 0;
+    left: 47.97%;
+    bottom: 0;
+    transform-origin: center 74%;
+}
+
+.arrow:hover {
+    background-color: var(--arrow-hover);
+}
+
+.top-flip {
+    transform: rotateX(180deg);
+    transform-origin: center 26%;
+}
+
+.left-flip {
+    transform: rotateY(180deg);
+    transform-origin: 26% center;
+}
+
+.right-flip {
+
+    transform: rotateY(180deg);
+    transform-origin: 74% center;
+
+}
+
+.bot-flip {
+
+    transform: rotateX(180deg);
+    transform-origin: center 74%;
+
+}
+
+.control-holder {
+
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 1;
+
+}
+
+.control-container {
+
+    width: 100%;
+    height: auto;
+    background-color: var(--bg-normal);
+    display: none;
+    z-index: 1;
+    padding: max(3.5rem, 20px) 1rem 1rem 1rem;
+
+}
+
+.menu-holder {
+
+    position: fixed;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 1;
+
+}
+
+.menu-container {
+    background-color: var(--bg-normal);
+    display: none;
+    z-index: 1;
+    padding: 1rem 1rem 1rem max(3.5rem, 20px);
+}
+
+.music-holder {
+
+    position: fixed;
+    right: 0;
+    z-index: 1;
+    top: 50%;
+    transform: translate(0, -50%);
+
+}
+
+.music-container {
+    background-color: var(--bg-normal);
+    display: none;
+    z-index: 1;
+    padding: 1rem max(3.5rem, 20px) 1rem 1rem;
+}
+
+.master-holder {
+
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 0);
+    z-index: 1;
+
+}
+
+.master-container {
+
+    width: auto;
+    height: auto;
+    background-color: var(--bg-normal);
+    display: none;
+    z-index: 1;
+    padding: 1rem 1rem max(3.5rem, 20px) 1rem;
+
+}
+
+.control-grid {
+    width: 100%;
+    height: 100%;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+}
+
+.control-grid > div {
+
+    color: white;
+    position: relative;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 1rem 1rem 1rem 1rem;
+    justify-items: center;
+    align-items: end;
+    grid-template-areas: 
+    "arrow arrow on display display"
+    "play play on display display"
+    "play play volume volume volume";
+
+}
+
+.control0 {
+
+    grid-area: control0;
+    display: grid;
+
+}
+
+.control1 {
+
+    grid-area: control1;
+    display: grid;
+
+}
+
+.control2 {
+
+    grid-area: control2;
+    display: grid;
+
+}
+
+.control3 {
+
+    grid-area: control3;
+    display: grid;
+
+}
+
+.control4 {
+
+    grid-area: control4;
+    display: grid;
+
+}
+
+.control5 {
+
+    grid-area: control5;
+
+}
+
+.control6 {
+
+    grid-area: control6;
+
+}
+
+.control7 {
+
+    grid-area: control7;
+
+}
+
+.control8 {
+
+    grid-area: control8;
+
+}
+
+.play-pause-container {
+
+    grid-area: play;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.control-grid .int-btn {
+
+    border: 1px solid white;
+    border-radius: 50%;
+    background-color: var(--transparent);
+    cursor: pointer;
+    width: 5.4rem;
+    height: 5.4rem;
+    margin-right: 1rem;
+
+}
+
+.int-btn .fa-play {
+
+    color: white;
+    font-size: 4rem;
+    padding-left: .64rem;
+
+}
+
+.int-btn .fa-pause {
+
+    color: white;
+    font-size: 4rem;
+
+}
+
+.control-grid .int-btn:hover, .master-pnp:hover {
+
+    background-color: var(--bg-hover-light);
+
+}
+
+.on-off-btn:hover {
+
+    background-color: var(--bg-hover-light);
+
+}
+
+.on-off-btn:active {
+
+    box-shadow: 0 0 5px white;
+    
+}
+
+.on-off-container {
+
+    grid-area: on;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+}
+
+.on-off-btn {
+
+    border: 1px solid white;
+    border-radius: 50%;
+    background-color: var(--transparent);
+    cursor: pointer;
+    width: 1.7rem;
+    height: 1.7rem;
+    color: white;
+    font-size: 1.05rem;
+    padding-top: .1rem;
+    margin-right: max(.6rem, 6px);
+
+}
+
+.btn-inactive {
+
+    color: var(--btn-inactive) !important;
+
+}
+
+.on-off-inactive:hover {
+
+    color: white;
+
+}
+
+.volume-container {
+
+    grid-area: volume;
+    height: 4rem;
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
+.slider {
+
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    background: rgba(0, 0, 0, 0);
+    border: 1px solid white;
+    border-radius: 5px;
+    height: 0.6rem;
+    width: 13rem;
+
+}
+
+.slider:hover {
+
+    background: var(--bg-hover-light);
+
+}
+
+.slider::-webkit-slider-thumb {
+
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.3rem;
+    height: 1.3rem;
+    border: 1px solid white;
+    cursor: pointer;
+    border-radius: 50%;
+    background: white;
+
+}
+
+.slider::-moz-range-thumb {
+
+    width: 1.3rem;
+    height: 1.3rem;
+    border: 1px solid white;
+    cursor: pointer;
+    border-radius: 50%;
+    background: white;
+
+}
+
+.audio-display {
+
+    border: 1px solid white;
+    width: 12rem;
+    height: 4rem;
+    grid-area: display;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--bg-hover-dark);
+
+}
+
+.audio-display i {
+
+    font-size: 1.5rem;
+    margin-right: .5rem;
+
+}
+
+.audio-display span {
+
+    text-align: center;
+    width: 70%;
+    user-select: none;
+
+}
+
+.switcher-arrow {
+
+    background-color: var(--arrow-invis);
+    cursor: pointer;
+    width: max(2.3rem, 9px);
+    height: max(2.3rem, 9px);
+    transition: background-color .25s, transform .2s;
+    clip-path: polygon(100% 0, 0 0, 50% 60%);
+    grid-area: arrow;
+    margin-right: 1rem;
+    z-index: 20;
+    transform-origin: center 26%;
+
+}
+
+.switcher-arrow:hover {
+
+    background-color: var(--arrow-hover);
+    
+}
+
+.switcher-arrow-flip {
+
+    transform: rotateX(180deg);
+    transform-origin: center 26%;
+
+}
+
+.switcher-holder {
+
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    display: none;
+    z-index: 12;
+
+}
+
+.switcher-container {
+
+    padding: 1rem 1rem 1rem 1rem;
+    display: flex;
+    height: 100%;
+    align-items: center;
+
+}
+
+.switcher-container span {
+
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 0 0 .1rem;
+    user-select: none;
+
+}
+
+.audio-switcher {
+
+    border: 1px solid white;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    background-color: rgb(20, 20, 20);
+
+}
+
+.audio-switcher ul {
+
+    flex: 1;
+    overflow: auto;
+
+}
+
+.audio-switcher ul li {
+
+    padding: .2rem 0 .2rem .2rem;
+    cursor: pointer;
+    user-select: none;
+    font-size: .85rem;
+
+}
+
+.audio-switcher ul li i {
+
+    margin-left: .2rem;
+
+}
+
+.audio-switcher ul li:hover {
+
+    background-color: rgb(42, 42, 42);
+
+}
+
+.audio-switcher ul .switcher-active:hover {
+
+    background-color: rgb(57, 57, 57);
+
+}
+
+.audio-switcher ul:last-child {
+
+    padding-bottom: 0;
+
+}
+
+.audio-switcher ul::-webkit-scrollbar {
+
+    width: .5rem;
+
+}
+
+.audio-switcher ul::-webkit-scrollbar-track {
+
+    background-color: rgb(20, 20, 20);
+
+}
+
+.audio-switcher ul::-webkit-scrollbar-thumb {
+
+    background-color: var(--arrow-invis);
+
+}
+
+.audio-switcher ul::-webkit-scrollbar-thumb:hover {
+
+    background-color: var(--arrow-hover);
+
+}
+
+.switcher-active {
+
+    background-color: rgb(57, 57, 57);
+
+}
+
+.menu-flex {
+
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 100%;
+    color: white;
+    padding: .8rem;
+    overflow: auto;
+
+}
+
+.logo-container, .sublogo-container {
+
+    display: flex;
+    justify-content: center;
+    margin-bottom: .6rem;
+
+}
+
+.logo-container {
+
+    margin-bottom: .6rem;
+
+}
+
+.sublogo-container {
+
+    margin-bottom: 3rem;
+
+}
+
+.logo {
+
+    font-family: 'Kaushan Script', cursive;
+    font-size: 4rem;
+    user-select: none;
+    transition: .4s text-shadow;
+
+}
+
+.logo:hover {
+
+    text-shadow: 0 0 7px white;
+
+}
+
+.sublogo {
+
+    font-size: 1.2rem;
+    user-select: none;
+    text-align: center;
+
+}
+
+.cliffnotes {
+
+    font-size: .85rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.cliffnotes p {
+
+    margin-bottom: .6rem;
+
+}
+
+.music-flex {
+
+    border: 1px solid white;
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: .8rem;
+    overflow: auto;
+    align-items: center;
+
+}
+
+.music-flex h2, h3, p {
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.music-flex h2 {
+
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: .7rem;
+
+}
+
+.music-flex h3 {
+
+    font-size: 1.2rem;
+    margin-bottom: .7rem;
+
+}
+
+.music-flex p {
+
+    font-size: .9rem;
+    margin-bottom: 1.4rem;
+    width: 100%;
+
+}
+
+.music-flex form {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+
+}
+
+.music-flex form * {
+
+    margin-bottom: .4rem;
+
+}
+
+.music-flex form label {
+
+    font-size: 1.2rem;
+
+}
+
+.music-flex form input[type=url] {
+
+    width: 100%;
+    background-color: var(--transparent);
+    border: 1px solid white;
+    padding: 0.2rem;
+    outline: none;
+    color: white;
+    font-size: 1rem;
+
+}
+
+.music-flex form input[type=url]:hover {
+
+    background-color: var(--bg-hover-light);
+
+}
+
+.music-flex form input[type=url]:focus {
+
+    background-color: var(--bg-hover-light);
+
+}
+
+.music-flex form input[type=button] {
+
+    color: white;
+    background-color: var(--transparent);
+    border: 1px solid white;
+    width: 5rem;
+    font-size: 1rem;
+    padding: .3rem;
+    outline: none;
+    cursor: pointer;
+
+}
+
+.music-flex form input[type=button]:hover {
+
+    background-color: var(--bg-hover-light);
+
+}
+
+.music-flex form i {
+
+    font-size: 1.2rem;
+
+}
+
+.music-flex iframe {
+
+    display: none;
+
+}
+
+.master-flex  {
+
+    display: flex;
+    flex-wrap: nowrap;
+    color: white;
+    padding: .8rem;
+    border: 1px solid white;
+    overflow: auto;
+    align-items: center;
+
+}
+
+.master-flex h3 {
+
+    font-size: 1.1rem;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    letter-spacing: -4px;
+    font-weight: bold;
+    user-select: none;
+
+}
+
+.master-pnp {
+
+    border: 1px solid white;
+    border-radius: 50%;
+    background-color: var(--transparent);
+    cursor: pointer;
+    min-width: 6rem;
+    min-height: 6rem;
+    margin: 0 2rem;
+
+}
+
+.master-pnp .fa-play {
+
+    color: white;
+    font-size: 4rem;
+    margin-left: .7rem;
+    
+}
+
+.master-pnp .fa-pause {
+
+    color: white;
+    font-size: 4rem;
+    margin-left: .05rem;
+    
+}
+
+.master-volume-container {
+
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
+@media only screen and (max-width: 600px) {
+    :root {
+        font-size: 11px;
+    }
+    .control-grid {
+        display: flex;
+        flex-direction: column;
+    }
+    .control5, .control6, .control7, .control8 {
+        display: none;
+    }
+    .menu-container, .music-container {
+        min-width: 88vw;
+        width: 88svw;
+        min-height: 90vh;
+        height: 90svh;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    :root {
+        font-size: 13px;
+    }
+    .control-grid {
+        display: flex;
+        flex-direction: column;
+    }
+    .control5, .control6, .control7, .control8 {
+        display: none;
+    }
+    .menu-container, .music-container {
+        min-width: 65vw;
+        width: 65svw;
+        min-height: 90vh;
+        height: 90svh;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    :root {
+        font-size: 14px;
+    }
+    .control-grid {
+        display: grid;
+        grid-template-areas: 
+            "control0 control1"
+            "control2 control3"
+            "control4 control5";
+    }
+    .control5 {
+        display: grid;
+    }
+    .control6, .control7, .control8 {
+        display: none;
+    }
+    .menu-container, .music-container {
+        min-width: 50vw;
+        width: 50svw;
+        min-height: 90vh;
+        height: 90svh;
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    :root {
+        font-size: 15px;
+    }
+    .control-grid {
+        display: grid;
+        grid-template-areas: 
+            "control0 control1 control2"
+            "control3 control4 control5"
+            "control6 control7 control8";
+    }
+    .control5, .control6, .control7, .control8 {
+        display: grid;
+    }
+    .menu-container, .music-container {
+        min-width: 30vw;
+        width: 30svw;
+        min-height: 90vh;
+        height: 90svh;
+    }
+}
+
+@media only screen and (min-width: 1303px) {
+    :root {
+        font-size: 17px;
+    }
+}
