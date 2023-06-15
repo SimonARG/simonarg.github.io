@@ -111,6 +111,7 @@ body {
     text-align: center;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .name {
@@ -201,34 +202,34 @@ body {
     transform: translateY(-100%);
 }
 
-.project-button {
+.project-button-container {
     background-color: var(--7);
-    font-size: 1.37rem;
-    font-weight: 700;
-    padding: .6em .5em .6em .5em;
+    padding: .6em .6em .6em .6em;
     margin-top: 1.7rem;
     border: 2px solid var(--4);
     color: var(--1brightest);
     cursor: pointer;
     transition: box-shadow .2s ease, border .2s ease, background-color .2s ease;
-    width: 8.6em;
+    width: 9rem;
     text-align: center;
 }
 
-.project-button:hover {
+.project-button-container:hover {
     box-shadow: 0 0 10px 4px var(--6);
     border: 2px solid var(--3);
     background-color: var(--6);
 }
 
-.project-button span {
+.project-button-container span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.2s;
+    font-size: 2rem;
+    font-weight: 700;
 }
 
-.project-button span:after {
+.project-button-container span:after {
     content: '\21B7';
     position: absolute;
     opacity: 0;
@@ -237,11 +238,11 @@ body {
     transition: 0.2s;
 }
 
-.project-button:hover span {
+.project-button-container:hover span {
     padding-right: 1.3rem;
 }
 
-.project-button:hover span:after {
+.project-button-container:hover span:after {
     opacity: 1;
     right: 0;
 }
