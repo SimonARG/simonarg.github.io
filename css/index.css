@@ -239,7 +239,7 @@ body {
 }
 
 .project-button-container:hover span {
-    padding-right: 1.3rem;
+    padding-right: 2rem;
 }
 
 .project-button-container:hover span:after {
