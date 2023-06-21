@@ -103,7 +103,7 @@ body {
 .body-container {
     min-height: 100vh;
     height: 100svh;
-    background-color: var(--8darkest);
+    background: linear-gradient(to right, var(--8darkest), var(--8darkest), var(--8darkest), var(--7), var(--7), var(--7), var(--7), var(--7), var(--8darkest), var(--8darkest), var(--8darkest))no-repeat 0 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -120,7 +120,7 @@ body {
     font-weight: 810;
     color: var(--1brightest);
     user-select: none;
-    background-color: var(--8darkest);
+    background-color: var(--7);
     padding-top: .3rem;
     white-space: nowrap;
 }
@@ -425,7 +425,7 @@ body {
 /* ------------- Projects.html ------------- */
 
 .projects-body-container {
-    background-color: var(--8darkest);
+    background: linear-gradient(to right, var(--8darkest), var(--8darkest), var(--8darkest), var(--7), var(--7), var(--7), var(--7), var(--7), var(--8darkest), var(--8darkest), var(--8darkest))no-repeat 0 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -440,7 +440,7 @@ body {
     font-size: 4.6rem;
     font-weight: 730;
     color: var(--1brightest);
-    background-color: var(--8darkest);
+    background-color: var(--7);
     user-select: none;
 }
 
