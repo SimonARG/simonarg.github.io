@@ -103,7 +103,6 @@ body {
 .body-container {
     min-height: 100vh;
     height: 100svh;
-    background: linear-gradient(to right, var(--8darkest), var(--8darkest), var(--8darkest), var(--7), var(--7), var(--7), var(--7), var(--7), var(--8darkest), var(--8darkest), var(--8darkest))no-repeat 0 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -608,6 +607,9 @@ body {
     .img-container button i {
         font-size: 1.8rem;
     }
+    .body-container {
+        background: linear-gradient(to bottom, var(--8darkest), var(--8darkest), var(--8darkest), var(--7), var(--7), var(--7), var(--7), var(--7), var(--8darkest), var(--8darkest), var(--8darkest))no-repeat 0 0;
+    }
 }
 
 @media only screen and (min-width: 600px) {
@@ -682,6 +684,9 @@ body {
     }
     .img-container button i {
         font-size: 1.1rem;
+    }
+    .body-container {
+        background: linear-gradient(to right, var(--8darkest), var(--8darkest), var(--8darkest), var(--7), var(--7), var(--7), var(--7), var(--7), var(--8darkest), var(--8darkest), var(--8darkest))no-repeat 0 0;
     }
 }
 
@@ -761,6 +766,9 @@ body {
     .img-container button i {
         font-size: 1.1rem;
     }
+    .body-container {
+        background: linear-gradient(to right, var(--8darkest), var(--8darkest), var(--8darkest), var(--7), var(--7), var(--7), var(--7), var(--7), var(--8darkest), var(--8darkest), var(--8darkest))no-repeat 0 0;
+    }
 }
 
 @media only screen and (min-width: 1158px) {
@@ -835,6 +843,9 @@ body {
     .img-container button i {
         font-size: 1.1rem;
     }
+    .body-container {
+        background: linear-gradient(to right, var(--8darkest), var(--8darkest), var(--8darkest), var(--7), var(--7), var(--7), var(--7), var(--7), var(--8darkest), var(--8darkest), var(--8darkest))no-repeat 0 0;
+    }
 }
 
 @media only screen and (min-width: 1303px) {
@@ -908,5 +919,8 @@ body {
     }
     .img-container button i {
         font-size: 1.1rem;
+    }
+    .body-container {
+        background: linear-gradient(to right, var(--8darkest), var(--8darkest), var(--8darkest), var(--7), var(--7), var(--7), var(--7), var(--7), var(--8darkest), var(--8darkest), var(--8darkest))no-repeat 0 0;
     }
 }
