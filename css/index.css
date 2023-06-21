@@ -96,6 +96,8 @@ body::-webkit-scrollbar-thumb {
 
 body {
     font-family: 'Sofia Sans Extra Condensed', sans-serif;
+    min-height: 100vh;
+    height: 100svh;
 }
 
 .body-container {
@@ -387,12 +389,11 @@ body {
     color: var(--1brightest);
     position: absolute;
     user-select: none;
-    transition: transform .3s ease, color .3s;
+    transition: .3s;
     z-index: 3;
 }
 
 .logo:hover {
-    transform: scale(1.2);
     color: var(--4);
 }
 
@@ -420,6 +421,123 @@ body {
 .adress:hover{
     text-shadow: 0 0 8px var(--3);
 }
+
+/* ------------- Projects.html ------------- */
+
+.projects-body-container {
+    background-color: var(--8darkest);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects-title-container {
+    width: fit-content;
+    height: fit-content;
+}
+
+.projects-title {
+    font-size: 4.6rem;
+    font-weight: 730;
+    color: var(--1brightest);
+    background-color: var(--8darkest);
+    user-select: none;
+}
+
+.ani-projects:hover {
+    background: linear-gradient(120deg, var(--1brightest), var(--1brightest), var(--1brightest), var(--1brightest), var(--1brightest), var(--1brightest), var(--5), var(--4), var(--1brightest)) var(--1brightest) no-repeat 0 0;
+    background-size: 0% 100%;
+    animation: stripes 1.4s ease forwards;
+}
+
+.ani-projects:hover .projects-title {
+    mix-blend-mode: darken;
+}
+
+.projects-container {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    display: grid;
+    gap: 4rem 4rem;
+}
+
+.project {
+    color: var(--1brightest);
+}
+
+.img-container {
+    box-shadow: 0 0 7px 4px var(--4);
+    border: 1px solid var(--2);
+    overflow: hidden;
+    transition: .3s ease;
+    position: relative;
+}
+
+.img-container:hover {
+    box-shadow: 0 0 7px 4px var(--5);
+}
+
+.img-container:hover > img {
+    transform: scale(1.05);
+    filter: brightness(55%) blur(2px);
+}
+
+.img-container:hover > .btn-container {
+    opacity: 1;
+}
+
+.img-container button {
+    position: absolute;
+    font-family: sofia;
+    transform: translate(-50%, -50%);
+    font-family: 'Sofia Sans Extra Condensed', sans-serif;
+    letter-spacing: .03rem;
+    padding: .3rem .7rem;
+    background-color: var(--6);
+    color: var(--1brightest);
+    border: none;
+    cursor: pointer;
+    border: 1px solid var(--4);
+    transition: .15s ease;
+}
+
+.img-container button i {
+    margin-right: .3rem;
+}
+
+.btn-container {
+    opacity: 0;
+    transition: .3s ease;
+}
+
+.project img {
+    transition: .3s ease;
+}
+
+.pj-btn:hover {
+    box-shadow: 0 0 9px 1px var(--3);
+    border: 1px solid var(--2);
+}
+
+.portfolio {
+    grid-area: portfolio;
+}
+
+.blog {
+    grid-area: blog;
+}
+
+.ambient {
+    grid-area: ambient;
+}
+
+.placeholder {
+    grid-area: placeholder;
+}
+
+
+/* ------------- Media queries ------------- */
+
 
 @media only screen and (max-width: 600px) {
     :root {
@@ -468,6 +586,27 @@ body {
         min-width: 95vw;
         width: 95svw;
         height: auto;
+    }
+    .projects-title-container {
+        margin-top: 10rem;
+    }
+    .projects-container {
+        grid-template-areas: 
+        "portfolio"
+        "blog"
+        "ambient"
+        "placeholder";
+    }
+    .project img {
+        min-width: 90vw;
+        width: 90svw;
+    }.img-container button {
+        top: 80%;
+        left: 50%;
+        font-size: 2rem;
+    }
+    .img-container button i {
+        font-size: 1.8rem;
     }
 }
 
@@ -520,6 +659,30 @@ body {
         height: auto;
         width: 60vw;
     }
+    .projects-title-container {
+        margin-top: 2rem;
+    }
+    .projects-container {
+        grid-template-areas: 
+        "portfolio blog"
+        "ambient placeholder";
+    }
+    .project img {
+        min-width: 32vw;
+        width: 32svw;
+    }
+    .projects-body-container {
+        min-height: 100vh;
+        height: 100svh;
+    }
+    .img-container button {
+        top: 86%;
+        left: 50%;
+        font-size: 1.4rem;
+    }
+    .img-container button i {
+        font-size: 1.1rem;
+    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -570,6 +733,33 @@ body {
     .about-container {
         height: auto;
         width: 60vw;
+    }
+    .projects-title-container {
+        margin-top: 2rem;
+    }
+    .projects-container {
+        grid-template-areas: 
+        "portfolio blog"
+        "ambient placeholder";
+    }
+    .project img {
+        min-width: 32vw;
+        width: 32svw;
+    }
+    .projects-body-container {
+        min-height: 100vh;
+        height: 100svh;
+    }
+    .projects-body-container {
+        height: fit-content;
+    }
+    .img-container button {
+        top: 86%;
+        left: 50%;
+        font-size: 1.4rem;
+    }
+    .img-container button i {
+        font-size: 1.1rem;
     }
 }
 
@@ -622,6 +812,29 @@ body {
         height: auto;
         width: 60vw;
     }
+    .projects-title-container {
+        margin-top: 2rem;
+    }
+    .projects-container {
+        grid-template-areas: 
+        "portfolio blog"
+        "ambient placeholder";
+    }
+    .project img {
+        min-width: 32vw;
+        width: 32svw;
+    }
+    .projects-body-container {
+        height: fit-content;
+    }
+    .img-container button {
+        top: 86%;
+        left: 50%;
+        font-size: 1.4rem;
+    }
+    .img-container button i {
+        font-size: 1.1rem;
+    }
 }
 
 @media only screen and (min-width: 1303px) {
@@ -672,5 +885,28 @@ body {
     .about-container {
         height: auto;
         width: 60vw;
+    }
+    .projects-title-container {
+        margin-top: 2rem;
+    }
+    .projects-container {
+        grid-template-areas: 
+        "portfolio blog"
+        "ambient placeholder";
+    }
+    .project img {
+        min-width: 32vw;
+        width: 32svw;
+    }
+    .projects-body-container {
+        height: fit-content;
+    }
+    .img-container button {
+        top: 86%;
+        left: 50%;
+        font-size: 1.4rem;
+    }
+    .img-container button i {
+        font-size: 1.1rem;
     }
 }
