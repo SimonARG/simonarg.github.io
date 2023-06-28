@@ -317,6 +317,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: .2s ease;
 }
 
 .about-container button i {
@@ -355,6 +356,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: .2s ease;
 }
 
 .socials-container button i {
@@ -378,7 +380,7 @@ body {
     align-items: center;
     justify-content: flex-end;
     padding: 1rem;
-    transition: transform .3s, background-color .3s;
+    transition: .2s ease;
 }
 
 .socials-grid a span {
@@ -394,7 +396,6 @@ body {
 }
 
 .socials-grid a:hover {
-    transform: scale(1.06);
     background-color: var(--6);
 }
 
@@ -615,6 +616,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: .2s ease;
 }
 
 .pj-info button i {
@@ -636,7 +638,8 @@ body {
 
 .pj-info span:hover {
     box-shadow: 0 0 4px 2px var(--4);
-    border: .01rem solid var(--3);
+    border: .01rem solid var(--2);
+    color: var(--2);
 }
 
 .tech-list {
@@ -1152,7 +1155,7 @@ p::-webkit-scrollbar-thumb {
         padding: .3rem .5rem;
     }
     .pj-info span {
-        padding: .07rem .2rem;
+        padding: .07rem .4rem;
         font-size: 1.4rem;
     }
     .pj-info p {
