@@ -8,7 +8,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="Simon Chasnovsky - Porfolio">
 
-		<title>Simón P. Chasnovsky</title>
+		<title>Simón Chasnovsky | Proyectos</title>
 
 		<link rel="stylesheet" href="css/index.css">
 		<link rel="stylesheet" href="js/jquery-ui/jquery-ui.css">
@@ -35,7 +35,7 @@
                     <div class="img-container">
                         <img class="project-thumb" src="imgs/portfolio.jpg" alt="">
                         <div class="btn-container">
-                            <button class="pj-btn"><i class="fa-solid fa-eye"></i>VER PROYECTO</button>
+                            <button class="pj-btn portfolio-btn"><i class="fa-solid fa-eye"></i>VER PROYECTO</button>
                         </div>
                     </div>
                 </div>
@@ -43,7 +43,7 @@
                     <div class="img-container">
                         <img class="project-thumb" src="imgs/blog.jpg" alt="">
                         <div class="btn-container">
-                            <button class="pj-btn"><i class="fa-solid fa-eye"></i>VER PROYECTO</button>
+                            <button class="pj-btn blog-btn"><i class="fa-solid fa-eye"></i>VER PROYECTO</button>
                         </div>
                     </div>
                 </div>
@@ -51,7 +51,7 @@
                     <div class="img-container">
                         <img class="project-thumb" src="imgs/ambient.jpg" alt="">
                         <div class="btn-container">
-                            <button class="pj-btn"><i class="fa-solid fa-eye"></i>VER PROYECTO</button>
+                            <button class="pj-btn ambient-btn"><i class="fa-solid fa-eye"></i>VER PROYECTO</button>
                         </div>
                     </div>
                 </div>
@@ -67,14 +67,18 @@
 
 			<div class="holder">
 				<div id="about" class="about-container">
-					<button class="about-closer" type="button">╳</button>
+					<button class="about-closer" type="button">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
 					<p class="about-text">Hola! Soy Simón Paul Chasnovsky, para usted, programador! Mi área de conocimiento general es full-stack web-dev manejando PHP (Laravel, Codeigniter) y bases de datos SQL en el back-end, y HTML, CSS y JavaScript (React, Angular, Bootstrap, SASS, JQuery) en el front-end. Esto implica conocimiento de GIT, y también me gusta trabajar con C++, OpenGL y Java, principalmente en lo que aplica al desarrollo de video-juegos y aplicaciones de escritorio y móviles (esto es más bien un hobby). Me interesa mucho la tecnología y en especial la computación, por lo que también con los años terminé con experiencia en la Suite Creativa de Adobe (Photoshop, Lightroom, Premiere, After-Effects, Illustrator, Audition), en las suites de oficina de Google y Microsoft (Word, Excel, Access, PowerPoint), y en hardware (planificación y construcción de computadoras de escritorio y servidores, manejo de redes y troubleshooting).</br></br>Si te agrada mi portafolios, no dudes en contactarme, seguramente sea una adición valiosa a tu equipo! Y si querés saber más sobre mi, andá clickeando los links en esta página.</p>
 				</div>
 			</div>
 
 			<div class="holder">
 				<div id="socials" class="socials-container">
-					<button class="socials-closer" type="button">╳</button>
+					<button class="socials-closer" type="button">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
 					<div class="socials-grid">
 
 						<a class="socials-instagram" 
@@ -116,6 +120,94 @@
 					</div>
 				</div>
 			</div>
+
+            <div class="project-pu-container portfolio-pu">
+                <img src="imgs/portfolio.jpg" alt="">
+                <div class="pj-info portfolio-info">
+                    <h3>PORTAFOLIOS</h3>
+                    <button class="portfolio-btn">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <h2>TECNOLOGÍAS USADAS</h2>
+                    <div class="tech-list">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JS</span>
+                    </div>
+                    <div class="divider"></div>
+                    <h3 class="info-desc">DESCRIPCIÓN:</h3>
+                    <p>Portafolios personal estilizado, animado y multi-lenguaje. Necesitaba un portafolios, entonces lo hice!
+
+                    Hecho en HTML, CSS y JavaScript puros.
+                    </p>
+                    <a class="source" href="https://github.com/SimonARG/Portfolio" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-solid fa-eye"></i>
+                        CODIGO
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-pu-container blog-pu">
+                <img src="imgs/blog.jpg" alt="">
+                <div class="pj-info blog-info">
+                    <h3>BLOG</h3>
+                    <button class="blog-btn">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <h2>TECNOLOGÍAS USADAS</h2>
+                    <div class="tech-list">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JS</span>
+                        <span>PHP</span>
+                    </div>
+                    <div class="divider"></div>
+                    <h3 class="info-desc">DESCRIPCIÓN:</h3>
+                    <p>Blog personal dinámico creado para demostrar mi habilidad de escribir una backend PHP capaz de cargar y descargar contenido dinámicamente dependiendo de user input... y también porque bloggear es divertido. Permite:
+
+                    -Ver posts en varias páginas en el index
+                    -Ver el contenido de un solo post
+                    -Entrar o salir de la cuenta de admin
+                    -Crear, editar o borrar posts con Markdown
+                    -Buscar posts
+                    </p>
+                    <a class="source" href="https://github.com/SimonARG/Blog" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-solid fa-eye"></i>
+                        CODIGO
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-pu-container ambient-pu">
+                <img src="imgs/ambient.jpg" alt="">
+                <div class="pj-info ambient-info">
+                    <h3>GENERADOR DE AMBIENTE</h3>
+                    <button class="ambient-btn">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <h2>TECNOLOGÍAS USADAS</h2>
+                    <div class="tech-list">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JS</span>
+                    </div>
+                    <div class="divider"></div>
+                    <h3 class="info-desc">DESCRIPCIÓN:</h3>
+                    <p>Webapp que permite al usuario crear su propio ruido ambiental de fondo a través de la configuración y unión de varios audios individuales. Premite:
+
+                    -Encender y apagar pistas de audio
+                    -Pausar y reproducir audios encendidos
+                    -Ajustar el volumen de audios individuales
+                    -Seleccionar audios pre-determinados de una extensa lista
+                    -Añadir tu propia música con Spotify o YouTube
+                    -Pausar, reproducir y cambiar el volumen maestro
+                    </p>
+                    <a class="source" href="https://github.com/SimonARG/Ambiance-Generator" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-solid fa-eye"></i>
+                        CODIGO
+                    </a>
+                </div>
+            </div>
 
 		</div>
 
