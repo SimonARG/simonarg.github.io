@@ -296,9 +296,11 @@ body {
     font-size: 1.6rem;
     padding: 2rem 2rem 3.4rem 2rem;
     text-align: center;
-    display: none;
     border: 1px solid var(--4);
     box-shadow: 0 0 10px 7px var(--6);
+    visibility: hidden;
+    opacity: 0;
+    transition: .4s ease;
 }
 
 .about-container button {
@@ -332,9 +334,11 @@ body {
     width: max(90vw, auto);
     color: var(--2);
     padding: 2rem 2rem 3.4rem 2rem;
-    display: none;
     border: 1px solid var(--4);
     box-shadow: 0 0 8px 5px var(--6);
+    visibility: hidden;
+    opacity: 0;
+    transition: .4s ease;
 }
 
 .socials-container button {
@@ -375,12 +379,13 @@ body {
     justify-content: flex-end;
     padding: 1rem;
     transition: transform .3s, background-color .3s;
-    z-index: 2;
 }
 
 .socials-grid a span {
     font-size: 2.6rem;
     color: var(--2);
+    text-align: center;
+    width: 100%;
 }
 
 .socials-grid a i {
@@ -391,6 +396,12 @@ body {
 .socials-grid a:hover {
     transform: scale(1.06);
     background-color: var(--6);
+}
+
+.socials-pu--active, .about-pu--active {
+    visibility: visible;
+    opacity: 1;
+    transition: .4s ease;
 }
 
 .logo-container {
@@ -485,7 +496,6 @@ body {
     overflow: hidden;
     transition: .3s ease;
     position: relative;
-    z-index: 4;
 }
 
 .img-container:hover {
@@ -556,7 +566,7 @@ body {
     border: 2px solid var(--3);
     box-shadow: 0 0 10px 4px var(--4);
     grid-template-columns: auto;
-    z-index: 6;
+    z-index: 10;
 }
 
 .portfolio-pu, .blog-pu, .ambient-pu {
@@ -708,7 +718,7 @@ p::-webkit-scrollbar-thumb {
     .name {
         font-size: 3rem;
     }
-    .holder {
+    .about-container, .socials-container {
         position: fixed;
         top: 50%;
         left: 50%;
@@ -790,7 +800,7 @@ p::-webkit-scrollbar-thumb {
     .name {
         font-size: 4.5rem;
     }
-    .holder {
+    .about-container, .socials-container {
         position: fixed;
         top: 30%;
         left: 50%;
@@ -874,7 +884,7 @@ p::-webkit-scrollbar-thumb {
     .name {
         font-size: 4.5rem;
     }
-    .holder {
+    .about-container, .socials-container {
         position: fixed;
         top: 30%;
         left: 50%;
@@ -961,7 +971,7 @@ p::-webkit-scrollbar-thumb {
     .name {
         font-size: 4.5rem;
     }
-    .holder {
+    .about-container, .socials-container {
         position: fixed;
         top: 30%;
         left: 50%;
@@ -1044,7 +1054,7 @@ p::-webkit-scrollbar-thumb {
     .name {
         font-size: 4.5rem;
     }
-    .holder {
+    .about-container, .socials-container {
         position: fixed;
         top: 30%;
         left: 50%;

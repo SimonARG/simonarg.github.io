@@ -32,55 +32,22 @@ inlineWordContainerJp.forEach(function(container) {
     });
 });
 
-let aboutShow = false;
-let socialsShow = false;
+const btnBlog = document.querySelectorAll(".blog-btn"), 
+    blog = document.querySelector(".blog-pu"),
+    btnPortfolio = document.querySelectorAll(".portfolio-btn"),
+    portfolio = document.querySelector(".portfolio-pu"),
+    btnAmbient = document.querySelectorAll(".ambient-btn"),
+    ambient = document.querySelector(".ambient-pu");
 
-$(".left-bar-about").click(function() {
-    if (socialsShow == true) {
-        $("#socials").hide("fold", 318);
-        socialsShow = false;
-    }
+const socialsOpen = document.querySelector(".left-bar-socials"),
+    socialsClose = document.querySelector(".socials-closer"),
+    socials = document.querySelector(".socials-container"),
+    aboutOpen = document.querySelector(".left-bar-about"),
+    aboutClose = document.querySelector(".about-closer"),
+    about = document.querySelector(".about-container");
 
-    if (aboutShow == false) {
-        $("#about").show("fold", 318);
-        aboutShow = true;
-    } else {
-        $("#about").hide("fold", 318);
-        aboutShow = false;
-    }
-})
-
-$(".left-bar-socials").click(function() {
-    if (aboutShow == true) {
-        $("#about").hide("fold", 318);
-        aboutShow = false;
-    }
-
-    if (socialsShow == false) {
-        $("#socials").show("fold", 318);
-        socialsShow = true;
-    } else {
-        $("#socials").hide("fold", 318);
-        socialsShow = false;
-    }
-})
-
-$(".about-closer").click(function() {
-    $("#about").hide("fold", 318);
+let socialsShow = false,
     aboutShow = false;
-});
-
-$(".socials-closer").click(function() {
-    $("#socials").hide("fold", 318);
-    socialsShow = false;
-});
-
-const btnBlog = document.querySelectorAll(".blog-btn"),
-      blog = document.querySelector(".blog-pu"),
-      btnPortfolio = document.querySelectorAll(".portfolio-btn"),
-      portfolio = document.querySelector(".portfolio-pu"),
-      btnAmbient = document.querySelectorAll(".ambient-btn"),
-      ambient = document.querySelector(".ambient-pu");
 
 btnBlog.forEach(btn => {
     btn.addEventListener("click", () => {
@@ -98,4 +65,44 @@ btnAmbient.forEach(btn => {
     btn.addEventListener("click", () => {
         ambient.classList.toggle("ambient-pu--active");
     });
+});
+
+aboutOpen.addEventListener("click", () => {
+    if (socialsShow == true) {
+        socials.classList.remove("socials-pu--active");
+        socialsShow = false;
+    }
+
+    if (aboutShow == false) {
+        about.classList.add("about-pu--active");
+        aboutShow = true;
+    } else {
+        about.classList.remove("about-pu--active");
+        aboutShow = false;
+    }
+});
+
+socialsOpen.addEventListener("click", () => {
+    if (aboutShow == true) {
+        about.classList.remove("about-pu--active");
+        aboutShow = false;
+    }
+
+    if (socialsShow == false) {
+        socials.classList.add("socials-pu--active");
+        socialsShow = true;
+    } else {
+        socials.classList.remove("socials-pu--active");
+        socialsShow = false;
+    }
+});
+
+aboutClose.addEventListener("click", () => {
+    about.classList.remove("about-pu--active");
+    aboutShow = false;
+});
+
+socialsClose.addEventListener("click", () => {
+    socials.classList.remove("socials-pu--active");
+    socialsShow = false;
 });
