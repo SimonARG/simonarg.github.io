@@ -666,6 +666,7 @@ body {
     cursor: pointer;
     border: 1px solid var(--4);
     width: fit-content;
+    transition: .2s ease;
 }
 
 .source:hover {
@@ -797,8 +798,8 @@ p::-webkit-scrollbar-thumb {
     .left-bar-socials i {
         margin-right: .09rem;
     }
-    .left-bar-blog i {
-        margin-right: .4rem;
+    .left-bar-linkedin i {
+        margin-right: .3rem;
     }
     .name {
         font-size: 4.5rem;
@@ -881,8 +882,8 @@ p::-webkit-scrollbar-thumb {
     .left-bar-socials i {
         margin-right: .09rem;
     }
-    .left-bar-blog i {
-        margin-right: .4rem;
+    .left-bar-linkedin i {
+        margin-right: .3rem;
     }
     .name {
         font-size: 4.5rem;
@@ -968,8 +969,8 @@ p::-webkit-scrollbar-thumb {
     .left-bar-socials i {
         margin-right: .09rem;
     }
-    .left-bar-blog i {
-        margin-right: .4rem;
+    .left-bar-linkedin i {
+        margin-right: .3rem;
     }
     .name {
         font-size: 4.5rem;
@@ -1051,8 +1052,8 @@ p::-webkit-scrollbar-thumb {
     .left-bar-socials i {
         margin-right: .09rem;
     }
-    .left-bar-blog i {
-        margin-right: .4rem;
+    .left-bar-linkedin i {
+        margin-right: .3rem;
     }
     .name {
         font-size: 4.5rem;
