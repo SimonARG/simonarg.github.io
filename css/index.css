@@ -570,7 +570,7 @@ body {
     z-index: 10;
 }
 
-.portfolio-pu, .blog-pu, .ambient-pu {
+.portfolio-pu, .blog-pu, .ambient-pu, .mixtorrents-pu {
     visibility: hidden;
     opacity: 0;
     transition: .4s;
@@ -578,7 +578,8 @@ body {
 
 .portfolio-pu--active,
 .blog-pu--active,
-.ambient-pu--active {
+.ambient-pu--active,
+.mixtorrents-pu--active {
     visibility: visible;
     opacity: 1;
 }

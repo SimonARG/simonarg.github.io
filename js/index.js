@@ -37,7 +37,9 @@ const btnBlog = document.querySelectorAll(".blog-btn"),
     btnPortfolio = document.querySelectorAll(".portfolio-btn"),
     portfolio = document.querySelector(".portfolio-pu"),
     btnAmbient = document.querySelectorAll(".ambient-btn"),
-    ambient = document.querySelector(".ambient-pu");
+    ambient = document.querySelector(".ambient-pu"),
+    btnMixtorrents = document.querySelectorAll(".mixtorrents-btn"),
+    mixtorrents = document.querySelector(".mixtorrents-pu");
 
 const socialsOpen = document.querySelector(".left-bar-socials"),
     socialsClose = document.querySelector(".socials-closer"),
@@ -64,6 +66,12 @@ btnPortfolio.forEach(btn => {
 btnAmbient.forEach(btn => {
     btn.addEventListener("click", () => {
         ambient.classList.toggle("ambient-pu--active");
+    });
+});
+
+btnMixtorrents.forEach(btn => {
+    btn.addEventListener("click", () => {
+        mixtorrents.classList.toggle("mixtorrents-pu--active");
     });
 });
 
