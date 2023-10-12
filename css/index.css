@@ -645,6 +645,8 @@ body {
 
 .tech-list {
     margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .divider {
