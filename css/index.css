@@ -1106,14 +1106,14 @@ p::-webkit-scrollbar-thumb {
     .projects-title {
         background-color: var(--7);
     }
-    .project-pu-container img {
+    .project-pu-container .pj-vid {
         min-width: 60vw;
         width: 60svw;
     }
 }
 
 @media only screen and (max-aspect-ratio: 1/1) {
-    .project-pu-container img {
+    .project-pu-container .pj-vid {
         min-width: 94vw;
         width: 94svw;
     }
@@ -1140,7 +1140,7 @@ p::-webkit-scrollbar-thumb {
 }
 
 @media only screen and (min-aspect-ratio: 1/1) {
-    .project-pu-container img {
+    .project-pu-container .pj-vid {
         height: 30svw;
     }
     .divider {
